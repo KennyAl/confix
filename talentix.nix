@@ -6,6 +6,7 @@
 }:
 {
   imports = [
+    ./talentix-hardware.nix
     ./minimal-desktop.nix
     ./gnome.nix
   ];
@@ -17,6 +18,8 @@
     networking = {
       # We get this via dhcp
       hostName = "";
+      # ZFS needs this
+      hostId = "8f25e349";
       # networkmanager.enable = lib.mkforce false;
     };
 
@@ -27,10 +30,16 @@
         "wheel"
       ];
       shell = pkgs.fish;
+      hashedPassword = "$y$j9T$umD3dZS306Wio/Q5LkbMm1$sD1vae2x18BpRCUMWEsYKIJ0Vg9xmUn04/cfj5AyJU/";
     };
+    users.users.root.password = "";
 
+    programs.thunderbird.enable = true;
     environment.systemPackages = with pkgs; [
+      element-desktop
+      obsidian
       pass
+      zotero
     ];
 
     nix.gc = {
@@ -43,8 +52,13 @@
       passwordFile = "/home/kenny/.config/restic/keyfile";
       repositoryFile = "/home/kenny/.config/restic/repo";
       runCheck = true;
-      timerConfig = "*:0/30";
-      inhibitsSleep = true;
+      # Otherwise the service does not find my ssh config
+      user = "kenny";
+      timerConfig = {
+        OnCalendar = "*:0/30";
+      };
+      # Needs authentication
+      inhibitsSleep = false;
       exclude = [
         ".git"
         # Exclude the contents of the `volatile` dir in home

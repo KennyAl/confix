@@ -16,7 +16,7 @@
 
   # Not sure if this even works. Discord crashes stil while screensharing...
   xdg.portal = {
-    enable = config.services.flatpak.enable;
+    enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gnome
