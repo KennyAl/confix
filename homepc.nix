@@ -1,4 +1,3 @@
-# The most minimal system configuration possible
 {
   config,
   lib,

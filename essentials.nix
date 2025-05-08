@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     bat
     btop
+    fd
     fish
     git
     gitui
@@ -22,6 +23,7 @@
     xh
     zellij
   ];
+  environment.variables.EDITOR = "hx";
   environment.shellAliases = {
     cat = "bat";
     less = "moar";
