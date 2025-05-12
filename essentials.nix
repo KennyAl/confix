@@ -26,7 +26,9 @@
   environment.variables.EDITOR = "hx";
   environment.shellAliases = {
     cat = "bat";
+    gp = "git pull --rebase --autostash";
     less = "moar";
     wget = "xh";
+    zj = "zellij";
   };
 }
