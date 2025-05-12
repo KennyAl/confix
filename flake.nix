@@ -16,13 +16,13 @@
         system = "x86_64-linux";
         # specialArgs = attrs;
         modules = [
-          ./homepc.nix
+          ./hosts/homepc/default.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.kenny = ./homepc-home.nix;
+              users.kenny = ./hosts/homepc/home.nix;
             };
           }
         ];
@@ -31,13 +31,13 @@
         system = "x86_64-linux";
         # specialArgs = attrs;
         modules = [
-          ./talentix.nix
+          ./hosts/talentix/default.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.jdoe = ./talentix-home.nix;
+              users.kenny = ./hosts/talentix/home.nix;
             };
           }
         ];

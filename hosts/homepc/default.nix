@@ -6,10 +6,10 @@
 }:
 {
   imports = [
-    ./homepc-hardware.nix
-    ./flatpak.nix
-    ./minimal-desktop.nix
-    ./gnome.nix
+    ./hardware.nix
+    ../../flatpak.nix
+    ../../minimal-desktop.nix
+    ../../gnome.nix
   ];
 
   config = {

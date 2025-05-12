@@ -6,9 +6,9 @@
 }:
 {
   imports = [
-    ./talentix-hardware.nix
-    ./minimal-desktop.nix
-    ./gnome.nix
+    ./hardware.nix
+    ../../minimal-desktop.nix
+    ../../gnome.nix
   ];
 
   config = {
