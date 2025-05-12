@@ -1,0 +1,46 @@
+theme = "my-tn-storm"
+
+[editor]
+true-color = true
+line-number = "relative"
+auto-format = false
+bufferline = "always"
+cursorline = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "block"
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+tab = "→"
+#space = "•"
+#space = " "
+nbsp = "␣"
+newline = "↲"
+
+[editor.indent-guides]
+render = true
+
+[editor.smart-tab]
+enable = false
+
+[editor.file-picker]
+ignore = false
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+C-j = ":buffer-previous"
+C-k = ":buffer-next"
+C-c = ":buffer-close"
+C-p = "file_picker_in_current_directory"
+
+[keys.insert]
+C-j = ":buffer-previous"
+C-k = ":buffer-next"
+

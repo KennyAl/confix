@@ -1,0 +1,32 @@
+[language-server.ltex]
+command = "ltex-ls"
+
+[[language]]
+name = "latex"
+language-servers = [ "texlab", "ltex" ]
+
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "ltex" ]
+
+[language-server.ltex.config]
+ltex.additionalRules.enablePickyRules = true
+ltex.additionalRules.languageModel = "~/.config/helix/lang"
+
+[[language]]
+name = "nix"
+formatter = { command = "nixfmt" }
+auto-format = true
+
+[language-server.clangd]
+command = "clangd"
+args = ["--header-insertion=never"]
+
+[language-server.tinymist]
+command = "tinymist"
+
+[[language]]
+name = "typst"
+language-servers = [ "tinymist" ]
+formatter = [ "typstyle" ]
+
