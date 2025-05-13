@@ -23,6 +23,11 @@
       # networkmanager.enable = lib.mkforce false;
     };
 
+    powerManagement = {
+      enable = true;
+      cpuFreqGovernor = "performance";
+    };
+
     users.users.kenny = {
       isNormalUser = true;
       description = "kenny";
