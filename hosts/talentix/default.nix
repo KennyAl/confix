@@ -53,6 +53,13 @@
       options = "--delete-older-than 10d";
     };
 
+    services.zfs = {
+      # Default is monthly which should be enough
+      autoScrub.enable = true;
+      # Weekly trim
+      trim.enable = true;
+    };
+
     services.restic.backups.home = {
       passwordFile = "/home/kenny/.config/restic/keyfile";
       repositoryFile = "/home/kenny/.config/restic/repo";
