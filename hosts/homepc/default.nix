@@ -46,6 +46,7 @@
     programs.steam.gamescopeSession.enable = true;
     environment.systemPackages = with pkgs; [
       keymapp
+      protonvpn-gui
     ];
   };
 }
