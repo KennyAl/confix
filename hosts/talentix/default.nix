@@ -4,6 +4,11 @@
   pkgs,
   ...
 }:
+let
+  srapkgs =
+    (builtins.getFlake "git+https://github.com/luhsra/srapkgs?ref=master&rev=57935fba66eb3557b833f8a377b0a1ed9d95dd35")
+    .packages."x86_64-linux";
+in
 {
   imports = [
     ./hardware.nix
@@ -44,6 +49,7 @@
       element-desktop
       obsidian
       pass
+      srapkgs.sra-cli
       zotero
     ];
 
