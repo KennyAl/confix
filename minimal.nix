@@ -36,6 +36,8 @@
       LC_TIME = "de_DE.UTF-8";
     };
 
+    users.mutableUsers = false;
+
     system.stateVersion = "24.11";
   };
 }
