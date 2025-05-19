@@ -11,10 +11,13 @@
   config = {
     nixpkgs.config.allowUnfree = true;
 
-    nix.settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    nix = {
+      extraOptions = "download-buffer-size = 1073741824"; # 1 GiB
+      settings.experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
