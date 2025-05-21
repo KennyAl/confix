@@ -10,6 +10,7 @@
     ../../flatpak.nix
     ../../minimal-desktop.nix
     ../../gnome.nix
+    ../../niri.nix
   ];
 
   config = {

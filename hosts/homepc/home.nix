@@ -2,6 +2,7 @@
 {
   imports = [
     ../../home/desktop.nix
+    ./home/kanshi.nix
   ];
 
   home = {
