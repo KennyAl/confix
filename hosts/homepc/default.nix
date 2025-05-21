@@ -39,6 +39,7 @@
         "networkmanager"
         "wheel"
       ];
+      hashedPassword = "$y$j9T$jK2jk4b2hxgYSswnVmNm/.$1GPMwgzdd4rMvWOktePLOHKxRbOaZq1an9.eGIpmkQ8";
       shell = pkgs.fish;
     };
 
