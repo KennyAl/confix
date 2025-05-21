@@ -28,9 +28,33 @@ in
       # networkmanager.enable = lib.mkforce false;
     };
 
-    powerManagement = {
+    # Ignore closing of the lid when on external power
+    services.logind = {
+      lidSwitchExternalPower = "ignore";
+      extraConfig = ''
+        IdleAction=ignore
+      '';
+    };
+
+    services.power-profiles-daemon.enable = false;
+    services.tlp = {
       enable = true;
-      cpuFreqGovernor = "performance";
+      settings = {
+        PLATFORM_PROFILE_ON_AC = "performance";
+        PLATFORM_PROFILE_ON_BAT = "low-power";
+
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+        CPU_BOOST_ON_AC = 1;
+        CPU_BOOST_ON_BAT = 0;
+
+        START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+        STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+      };
     };
 
     users.users.kenny = {
