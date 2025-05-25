@@ -33,6 +33,9 @@
       wg-quick.interfaces.wghi.configFile = "/etc/wireguard/wghi.conf";
     };
 
+    # Default interval is weekly
+    services.fstrim.enable = true;
+
     users.users.kenny = {
       isNormalUser = true;
       description = "kenny";

@@ -18,7 +18,10 @@
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-1d59e51c-1bbe-4a6e-af29-fa320b1dc556".device = "/dev/disk/by-uuid/1d59e51c-1bbe-4a6e-af29-fa320b1dc556";
+  boot.initrd.luks.devices."luks-1d59e51c-1bbe-4a6e-af29-fa320b1dc556" = {
+    device = "/dev/disk/by-uuid/1d59e51c-1bbe-4a6e-af29-fa320b1dc556";
+    allowDiscards = true;
+  };
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/DCBC-7A72";
