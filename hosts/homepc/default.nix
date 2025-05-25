@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    ./hardware.nix
+    ./hardware-configuration.nix
     ../../flatpak.nix
     ../../minimal-desktop.nix
     ../../gnome.nix
