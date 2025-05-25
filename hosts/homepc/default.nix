@@ -30,6 +30,7 @@
       hostName = "home";
       # TODO: Switch to networkd once my network is sorted out...
       networkmanager.enable = true;
+      wg-quick.interfaces.wghi.configFile = "/etc/wireguard/wghi.conf";
     };
 
     users.users.kenny = {
