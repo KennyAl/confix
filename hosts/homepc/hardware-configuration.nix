@@ -31,12 +31,14 @@
 
   fileSystems."/mnt/stuff" =
     { device = "/dev/disk/by-uuid/A6F49096F4906A77";
-      fsType = "ntfs3";
+      fsType = "ntfs-3g";
+      options = ["ro"];
     };
 
   fileSystems."/mnt/cwin" =
     { device = "/dev/disk/by-uuid/6404C1A304C17896";
-      fsType = "ntfs3";
+      fsType = "ntfs-3g";
+      options = ["ro"];
     };
 
   swapDevices =
