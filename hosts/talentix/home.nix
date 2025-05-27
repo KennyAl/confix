@@ -2,6 +2,7 @@
 {
   imports = [
     ../../home/desktop.nix
+    ../../home/niri/default.nix
     ./home/kanshi.nix
   ];
 
