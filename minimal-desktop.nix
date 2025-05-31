@@ -26,7 +26,6 @@
     programs.firefox.enable = true;
     programs.starship.enable = true;
     environment.systemPackages = with pkgs; [
-      alacritty
       cascadia-code
       ghostty
       starship
