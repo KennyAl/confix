@@ -30,7 +30,10 @@
       hostName = "home";
       # TODO: Switch to networkd once my network is sorted out...
       networkmanager.enable = true;
-      wg-quick.interfaces.wghi.configFile = "/etc/wireguard/wghi.conf";
+      wg-quick.interfaces.wghi = {
+        configFile = "/etc/wireguard/wghi.conf";
+        autostart = false;
+      };
     };
 
     # Default interval is weekly
