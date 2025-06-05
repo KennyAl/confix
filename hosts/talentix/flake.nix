@@ -1,5 +1,5 @@
 {
-  description = "My nixos configuration";
+  description = "Nixos config for my work laptop";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -11,35 +11,26 @@
   };
 
   outputs =
-    { self, nixpkgs, nixos-hardware, home-manager, ... }@attrs:
     {
-      nixosConfigurations.home = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        # specialArgs = attrs;
-        modules = [
-          ./hosts/homepc/default.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.kenny = ./hosts/homepc/home.nix;
-            };
-          }
-        ];
-      };
+      self,
+      nixpkgs,
+      nixos-hardware,
+      home-manager,
+      ...
+    }@attrs:
+    {
       nixosConfigurations.talentix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         # specialArgs = attrs;
         modules = [
-          ./hosts/talentix/default.nix
+          ./default.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-x1-12th-gen
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.kenny = ./hosts/talentix/home.nix;
+              users.kenny = ./home.nix;
             };
           }
         ];

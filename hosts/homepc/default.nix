@@ -7,10 +7,10 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../flatpak.nix
-    ../../minimal-desktop.nix
-    ../../gnome.nix
-    ../../niri.nix
+    ../../modules/flatpak.nix
+    ../../modules/minimal-desktop.nix
+    ../../modules/gnome.nix
+    ../../modules/niri.nix
   ];
 
   config = {

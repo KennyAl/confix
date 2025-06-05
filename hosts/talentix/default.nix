@@ -12,9 +12,9 @@ in
 {
   imports = [
     ./hardware.nix
-    ../../minimal-desktop.nix
-    ../../gnome.nix
-    ../../niri.nix
+    ../../modules/minimal-desktop.nix
+    ../../modules/gnome.nix
+    ../../modules/niri.nix
   ];
 
   config = {
