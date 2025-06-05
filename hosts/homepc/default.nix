@@ -57,6 +57,9 @@
     environment.systemPackages = with pkgs; [
       keymapp
       protonvpn-gui
+      tidal-hifi
+      vdhcoapp
+      vlc
     ];
   };
 }
