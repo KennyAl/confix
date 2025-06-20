@@ -28,7 +28,10 @@
     environment.systemPackages = with pkgs; [
       cascadia-code
       ghostty
+      mpv
+      pwvucontrol
       starship
+      wdisplays
     ];
   };
 }
