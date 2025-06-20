@@ -23,7 +23,8 @@ in
 
     networking = {
       # We get this via dhcp
-      hostName = "";
+      # But this does not work when I'm using eduroam and wireguard
+      hostName = "talentix";
       # ZFS needs this
       hostId = "8f25e349";
       # networkmanager.enable = lib.mkforce false;
@@ -94,6 +95,7 @@ in
     services.restic.backups.home = {
       passwordFile = "/home/kenny/.config/restic/keyfile";
       repositoryFile = "/home/kenny/.config/restic/repo";
+      paths = ["/home/kenny"];
       runCheck = true;
       # Otherwise the service does not find my ssh config
       user = "kenny";
@@ -105,7 +107,7 @@ in
       exclude = [
         ".git"
         # Exclude the contents of the `volatile` dir in home
-        "/home/nixos/volatile"
+        "/home/kenny/volatile"
         # Helix is setup with a large ngram file, ignore it
         "helix/lang"
         # Since restic does currently not support excluding files bases on .gitignore I have to maintain a list of the worst offenders
