@@ -95,7 +95,7 @@ in
     services.restic.backups.home = {
       passwordFile = "/home/kenny/.config/restic/keyfile";
       repositoryFile = "/home/kenny/.config/restic/repo";
-      paths = ["/home/kenny"];
+      paths = [ "/home/kenny" ];
       runCheck = true;
       # Otherwise the service does not find my ssh config
       user = "kenny";
