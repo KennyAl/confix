@@ -120,5 +120,42 @@ in
         "*.a"
       ];
     };
+    services.printing = {
+      enable = true;
+      drivers = with pkgs; [ hplip ];
+    };
+    hardware.printers.ensurePrinters = [
+      {
+        name = "sra-kyocera";
+        location = "SRA R138";
+        deviceUri = "ipps://prn-126786-3703.print.uni-hannover.de:443/ipp/print";
+        model = "everywhere";
+      }
+      {
+        name = "sra-lab-bw";
+        location = "SRA R124";
+        deviceUri = "socket://prn-3703-001-128-1.print.uni-hannover.de:9100";
+        model = "drv:///hp/hpcups.drv/hp-laserjet_4200-pcl3.ppd";
+        ppdOptions = {
+          printer-is-shared = "false";
+          PageSize = "A4";
+          OptionDuplex = "True";
+          Duplex = "DuplexNoTumble";
+        };
+      }
+      {
+        name = "sra-lab-color";
+        location = "SRA R124";
+        deviceUri = "ipp://prn-3703-001-128-2.print.uni-hannover.de";
+        model = "everywhere";
+        ppdOptions = {
+          printer-is-shared = "false";
+          PageSize = "A4";
+          OptionDuplex = "True";
+          Duplex = "DuplexNoTumble";
+        };
+      }
+    ];
+
   };
 }
