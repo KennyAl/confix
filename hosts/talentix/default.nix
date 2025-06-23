@@ -6,7 +6,7 @@
 }:
 let
   srapkgs =
-    (builtins.getFlake "git+https://github.com/luhsra/srapkgs?ref=master&rev=57935fba66eb3557b833f8a377b0a1ed9d95dd35")
+    (builtins.getFlake "git+https://github.com/luhsra/srapkgs?ref=master&rev=20f578117281f18f969a76ef6f71a981c14b00f4")
     .packages."x86_64-linux";
 in
 {
