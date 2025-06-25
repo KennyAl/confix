@@ -123,6 +123,7 @@ in
     services.printing = {
       enable = true;
       drivers = with pkgs; [ hplip ];
+      stateless = true;
     };
     hardware.printers.ensurePrinters = [
       {
