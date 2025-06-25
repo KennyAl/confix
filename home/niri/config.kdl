@@ -41,6 +41,8 @@ cursor {
 environment {
     // Try to run electron apps with wayland
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
+    MOZ_ENABLE_WAYLAND "1";
+    QT_QPA_PLATFORM "wayland";
     // xwayland-satellite
     DISPLAY ":0"
 }
