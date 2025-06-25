@@ -2,9 +2,10 @@
 {
   services.kanshi = {
     enable = true;
-    profiles =
+    settings = [
       {
-        default = {
+        profile = {
+          name = "default";
           outputs = [
             {
               criteria = "PNP(BNQ) ZOWIE XL LCD 52H00916SL0";
@@ -22,6 +23,7 @@
             }
           ];
         };
-      };
+      }
+    ];
   };
 }
