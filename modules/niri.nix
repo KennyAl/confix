@@ -9,6 +9,7 @@
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
     kanshi
+    swaybg
     wofi
     xwayland-satellite
   ];

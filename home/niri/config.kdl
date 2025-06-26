@@ -72,7 +72,7 @@ layout {
     border {
         width 2
         inactive-color "#595959"
-        active-gradient from="#33ccff" to="#00ff99" angle=45 relative-to="workspace-view"
+        active-color "#c099ff"
     }
     struts {
         // left 32
@@ -84,6 +84,8 @@ layout {
 
 spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
+// TODO: Fix this once there is a home manger module and I port this
+spawn-at-startup "swaybg" "-i" "/home/kenny/.config/niri/wallpaper.jpg" 
 
 prefer-no-csd
 
