@@ -80,12 +80,20 @@ layout {
         // top 64
         // bottom 64
     }
+
+    background-color "transparent"
 }
 
 spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
 // TODO: Fix this once there is a home manger module and I port this
 spawn-at-startup "swaybg" "-i" "/home/kenny/.config/niri/wallpaper.jpg" 
+// Put swaybg inside the overview backdrop.
+// FIXME: Somehow this prevents swaybg from rendering the wallpaper for workspaces in the overview
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
 
 prefer-no-csd
 
