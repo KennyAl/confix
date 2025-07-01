@@ -42,10 +42,12 @@
     btop
     fd
     fish
+    hydra-check
     git
     gitui
     helix
     moar
+    nh
     nil
     nixfmt-rfc-style
     ripgrep
