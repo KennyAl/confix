@@ -115,6 +115,7 @@ binds {
     Mod+E { spawn "ghostty"; }
     Mod+P { spawn "firefox" "--private-window"; }
     Mod+Return { spawn "wofi" "--show" "drun"; }
+    Mod+B { spawn "hyprlock"; }
     // Super+Alt+L { spawn "swaylock"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
