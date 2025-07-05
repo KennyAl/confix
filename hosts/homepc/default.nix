@@ -35,6 +35,9 @@
       };
     };
 
+    # This fixes the windows clock as it also stores local time instead of UTC
+    time.hardwareClockInLocalTime = true;
+
     # Default interval is weekly
     services.fstrim.enable = true;
 
