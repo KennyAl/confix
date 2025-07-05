@@ -21,8 +21,7 @@
     hardware.nvidia.nvidiaSettings = true;
     hardware.nvidia = {
       modesetting.enable = true;
-      # The new module works better with wayland, but sets my fans to 100% speed...
-      open = false;
+      open = true;
     };
     services.xserver.videoDrivers = [ "nvidia" ];
 
