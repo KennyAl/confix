@@ -1,0 +1,52 @@
+window {
+border: 2px solid #C099FF;
+border-radius: 8px;
+background-color: #2F334D;
+}
+
+box {
+border-radius: 4px;
+background-color: #2F334D;
+}
+
+entry.password {
+border: 2px solid #C099FF;
+border-radius: 8px;
+background-color: #2F334D;
+font-size: large;
+font-weight: bold;
+font-family: monospace;
+margin-bottom: 10px;
+}
+
+/* Only used for password field */
+text {
+color: #C099FF;
+}
+
+/* For some reason I can not set the background color of buttons. */
+/* So I need to fake it with the label's padding */
+button {
+border: 2px solid #C099FF;
+border-radius: 8px;
+background-color: #2F334D;
+font-size: large;
+font-weight: bold;
+font-family: monospace;
+color: #C099FF;
+margin-bottom: 10px;
+padding: 0px;
+visibility: hidden;
+}
+
+label {
+color: #C099FF;
+background-color: #2F334D;
+font-size: large;
+font-weight: bold;
+font-family: monospace;
+margin: 0px;
+padding: 10px;
+border-radius: 4px;
+}
+

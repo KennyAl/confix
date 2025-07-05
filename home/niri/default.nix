@@ -2,6 +2,7 @@
 {
   imports = [
     ../wofi/default.nix
+    ../soteria/default.nix
   ];
 
   xdg.configFile = {

@@ -15,6 +15,9 @@
     xwayland-satellite
   ];
 
+  # Polkit auth agent
+  security.soteria.enable = true;
+
   # Remove this once we get rid of the gnome module completely
   services.displayManager.gdm.enable = lib.mkForce false;
   services.greetd = {
