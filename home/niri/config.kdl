@@ -41,10 +41,15 @@ cursor {
 environment {
     // Try to run electron apps with wayland
     ELECTRON_OZONE_PLATFORM_HINT "wayland"
-    MOZ_ENABLE_WAYLAND "1";
-    QT_QPA_PLATFORM "wayland";
+    MOZ_ENABLE_WAYLAND "1"
+    QT_QPA_PLATFORM "wayland"
+    SDL_VIDEODRIVER "wayland"
     // xwayland-satellite
     DISPLAY ":0"
+    // Those are not set by greetd. Maybe niri sets them, but lets be sure
+    XDG_SESSION_TYPE "wayland"
+    XDG_SESSION_DESKTOP "niri"
+    XDG_CURRENT_DESKTOP "niri"
 }
 
 layout {

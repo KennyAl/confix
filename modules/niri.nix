@@ -15,7 +15,18 @@
     xwayland-satellite
   ];
 
-  # Except xdgOpenUsePortal this is all set by the niri module anyway, but lets be explicit 
+  # Remove this once we get rid of the gnome module completely
+  services.displayManager.gdm.enable = lib.mkForce false;
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.greetd}/bin/agreety --cmd niri-session";
+      };
+    };
+  };
+
+  # Except xdgOpenUsePortal this is all set by the niri module anyway, but lets be explicit
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
