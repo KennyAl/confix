@@ -113,6 +113,13 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="gay.vaskel.Soteria"
+    border {
+        off
+    }
+}
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
