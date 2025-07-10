@@ -259,3 +259,9 @@ binds {
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P { power-off-monitors; }
 }
+
+debug {
+    // This might fix the remaining artifact issues when screensharing in discord.
+    // See https://github.com/YaLTeR/niri/issues/1432#issuecomment-2813894748
+    wait-for-frame-completion-in-pipewire
+}
