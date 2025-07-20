@@ -65,6 +65,10 @@
     programs.steam.enable = true;
     programs.gamescope.enable = true;
     programs.steam.gamescopeSession.enable = true;
+    # This is a temporary fix for proton-vpn unitl there is a module that adds this
+    # See: https://github.com/NixOS/nixpkgs/issues/425431
+    # TODO: Remove once fixed upstream
+    networking.networkmanager.plugins = with pkgs; [ networkmanager-openvpn ];
     environment.systemPackages = with pkgs; [
       keymapp
       obs-studio
