@@ -80,6 +80,9 @@
     environment.systemPackages = with pkgs; [
       keymapp
       obs-studio
+      # This segaults on first start under wayland, see https://github.com/NixOS/nixpkgs/issues/365156
+      # Got this working by launching with --ozone-platform-hint=x11 once.
+      protonmail-desktop
       protonvpn-gui
       tidal-hifi
       vdhcoapp
