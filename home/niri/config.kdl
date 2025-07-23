@@ -44,6 +44,7 @@ environment {
     MOZ_ENABLE_WAYLAND "1"
     QT_QPA_PLATFORM "wayland"
     SDL_VIDEODRIVER "wayland"
+    PROTON_ENABLE_WAYLAND "1"
     // xwayland-satellite
     DISPLAY ":0"
     // Those are not set by greetd. Maybe niri sets them, but lets be sure

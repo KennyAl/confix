@@ -62,9 +62,17 @@
     };
     users.users.root.hashedPassword = "$y$j9T$jK2jk4b2hxgYSswnVmNm/.$1GPMwgzdd4rMvWOktePLOHKxRbOaZq1an9.eGIpmkQ8";
 
-    programs.steam.enable = true;
-    programs.gamescope.enable = true;
-    programs.steam.gamescopeSession.enable = true;
+    programs = {
+      gamescope.enable = true;
+      steam = {
+        enable = true;
+        gamescopeSession.enable = true;
+        extraCompatPackages = with pkgs; [
+          proton-ge-bin
+        ];
+      };
+    };
+
     # This is a temporary fix for proton-vpn unitl there is a module that adds this
     # See: https://github.com/NixOS/nixpkgs/issues/425431
     # TODO: Remove once fixed upstream
