@@ -28,10 +28,14 @@
     environment.systemPackages = with pkgs; [
       cascadia-code
       ghostty
+      gnome-calculator
+      gnome-keyring
       mpv
+      nautilus
       pwvucontrol
       starship
       wdisplays
+      wl-clipboard-rs
     ];
   };
 }
