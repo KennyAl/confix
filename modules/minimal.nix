@@ -57,7 +57,7 @@
 
   environment.variables.EDITOR = "hx";
   environment.shellAliases = {
-    cat = "bat";
+    cat = "bat -p";
     gp = "git pull --rebase --autostash";
     less = "moar";
     wget = "xh";
