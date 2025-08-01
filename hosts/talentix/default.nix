@@ -21,6 +21,11 @@ in
     boot.supportedFilesystems = [ "zfs" ];
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
+    hardware.ipu6 = {
+      enable = true;
+      platform = "ipu6ep";
+    };
+
     networking = {
       # We get this via dhcp
       # But this does not work when I'm using eduroam and wireguard
