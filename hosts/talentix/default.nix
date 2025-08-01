@@ -70,6 +70,7 @@ in
     };
     users.users.root.password = "";
 
+    services.fwupd.enable = true;
     programs.thunderbird.enable = true;
     environment.systemPackages = with pkgs; [
       element-desktop
