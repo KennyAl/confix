@@ -73,6 +73,9 @@ in
     programs.thunderbird.enable = true;
     environment.systemPackages = with pkgs; [
       element-desktop
+      kdePackages.okular
+      libreoffice
+      microsoft-edge
       obsidian
       pass
       srapkgs.sra-cli
