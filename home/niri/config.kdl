@@ -37,6 +37,10 @@ cursor {
     hide-after-inactive-ms 1000
 }
 
+// Disable the hotkey overlay
+hotkey-overlay {
+    skip-at-startup
+}
 
 environment {
     // Try to run electron apps with wayland
