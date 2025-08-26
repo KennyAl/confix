@@ -9,7 +9,6 @@
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
     hyprlock
-    kanshi
     swaybg
     wofi
     xwayland-satellite

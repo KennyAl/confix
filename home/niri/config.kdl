@@ -94,7 +94,6 @@ layout {
     background-color "transparent"
 }
 
-spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
 // TODO: Fix this once there is a home manger module and I port this
 spawn-at-startup "swaybg" "-i" "/home/kenny/.config/niri/wallpaper.jpg" 
