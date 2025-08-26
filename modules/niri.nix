@@ -5,14 +5,31 @@
   pkgs,
   ...
 }:
+let
+  spawnAtStartup = exec: {
+    partOf = [ "graphical-session.target" ];
+    after = [ "graphical-session.target" ];
+    requisite = [ "graphical-session.target" ];
+    wantedBy = [ "niri.service" ];
+
+    serviceConfig = {
+      ExecStart = exec;
+      Restart = "on-failure";
+    };
+  };
+in
 {
   programs.niri.enable = true;
   environment.systemPackages = with pkgs; [
     hyprlock
-    swaybg
     wofi
     xwayland-satellite
   ];
+
+  systemd.user.services = {
+    # TODO: Fix this once there is a home manger module and I port this
+    swaybg = spawnAtStartup "${lib.getExe pkgs.swaybg} -i /home/kenny/.config/niri/wallpaper.jpg";
+  };
 
   # Polkit auth agent
   security.soteria.enable = true;

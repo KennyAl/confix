@@ -95,8 +95,6 @@ layout {
 }
 
 spawn-at-startup "xwayland-satellite"
-// TODO: Fix this once there is a home manger module and I port this
-spawn-at-startup "swaybg" "-i" "/home/kenny/.config/niri/wallpaper.jpg" 
 // Put swaybg inside the overview backdrop.
 // FIXME: Somehow this prevents swaybg from rendering the wallpaper for workspaces in the overview
 layer-rule {
