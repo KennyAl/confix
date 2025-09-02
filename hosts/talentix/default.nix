@@ -36,11 +36,9 @@ in
     };
 
     # Ignore closing of the lid when on external power
-    services.logind = {
-      lidSwitchExternalPower = "ignore";
-      extraConfig = ''
-        IdleAction=ignore
-      '';
+    services.logind.settings.Login = {
+      HandleLidSwitchExternalPower = "ignore";
+      IdleAction = "ignore";
     };
 
     services.power-profiles-daemon.enable = false;
