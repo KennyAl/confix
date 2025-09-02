@@ -49,7 +49,7 @@
     moar
     nh
     nil
-    nixfmt-rfc-style
+    nixfmt
     ripgrep
     xh
     zellij
