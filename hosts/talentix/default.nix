@@ -75,6 +75,8 @@ in
 
     services.fwupd.enable = true;
     programs.thunderbird.enable = true;
+    programs.direnv.nix-direnv.enable = true;
+    programs.direnv.enable = true;
     environment.systemPackages = with pkgs; [
       element-desktop
       kdePackages.okular
