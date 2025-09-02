@@ -79,6 +79,7 @@ in
     programs.direnv.enable = true;
     environment.systemPackages = with pkgs; [
       element-desktop
+      gimp
       kdePackages.okular
       libreoffice
       microsoft-edge
