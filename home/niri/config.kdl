@@ -49,8 +49,6 @@ environment {
     QT_QPA_PLATFORM "wayland"
     SDL_VIDEODRIVER "wayland"
     PROTON_ENABLE_WAYLAND "1"
-    // xwayland-satellite
-    DISPLAY ":0"
     // Those are not set by greetd. Maybe niri sets them, but lets be sure
     XDG_SESSION_TYPE "wayland"
     XDG_SESSION_DESKTOP "niri"
@@ -94,7 +92,6 @@ layout {
     background-color "transparent"
 }
 
-spawn-at-startup "xwayland-satellite"
 // Put swaybg inside the overview backdrop.
 // FIXME: Somehow this prevents swaybg from rendering the wallpaper for workspaces in the overview
 layer-rule {
@@ -260,10 +257,4 @@ binds {
 
     Ctrl+Alt+Delete { quit; }
     Mod+Shift+P { power-off-monitors; }
-}
-
-debug {
-    // This might fix the remaining artifact issues when screensharing in discord.
-    // See https://github.com/YaLTeR/niri/issues/1432#issuecomment-2813894748
-    wait-for-frame-completion-in-pipewire
 }
