@@ -1,5 +1,5 @@
 font-family = "Cascadia Code NF"
 font-size = 13
-theme = tokyonight-storm
+theme = tokyonight
 maximize = true
 # gtk-single-instance = false
