@@ -78,6 +78,7 @@
     # TODO: Remove once fixed upstream
     networking.networkmanager.plugins = with pkgs; [ networkmanager-openvpn ];
     environment.systemPackages = with pkgs; [
+      easyeffects
       keymapp
       obs-studio
       # This segaults on first start under wayland, see https://github.com/NixOS/nixpkgs/issues/365156
