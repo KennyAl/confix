@@ -82,6 +82,7 @@ in
       gimp
       kdePackages.okular
       libreoffice
+      mattermost-desktop
       microsoft-edge
       obsidian
       pass
